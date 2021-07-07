@@ -1,6 +1,9 @@
 pipeline {
      agent {
-        docker { image 'node:7-alpine' }
+        docker { 
+        label 'windows'
+        image 'node:7-alpine/powershell' 
+        }
     }
 
     stages {
