@@ -1,11 +1,13 @@
-
-    node {
-       stage('pull') {
-       bat "docker image pull node:14-alpine "
+pipeline {
+     agent {
+        docker { image 'node:7-alpine' }
     }
+
+    stages {
         stage('Test') {
-                bat " docker container run --name con-node node:14-alpine "
+            steps {
+                sh 'node --version'
             }
         }
-    
-
+    }
+}
