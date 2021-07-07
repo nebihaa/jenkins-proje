@@ -1,10 +1,10 @@
 
     node {
        stage('pull') {
-       bat "docker image pull node:14-alpine 
+       bat "docker image pull node:14-alpine "
     }
         stage('Test') {
-                bat 'node --version'
+                bat " node --version "
             }
         }
     
