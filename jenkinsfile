@@ -1,11 +1,9 @@
 pipeline {
     stage('example build') {
         bat " docker image build maven:3.8.1-adoptopenjdk-11 "
-        
-            echo ' hello, maven'
+           echo ' hello, maven'
             bat ' mvn --version'
-
-
       
     }
+}
 
