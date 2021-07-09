@@ -2,7 +2,7 @@ node {
     stage('example build') {
         bat " docker image pull maven:3.8.1-adoptopenjdk-11 "
            echo ' hello, maven'
-            bat ' mvn --version'
+            bat ' docker run --name con maven:3.8.1-adoptopenjdk-11'
       
     }
 }
