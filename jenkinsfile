@@ -2,10 +2,10 @@ pipeline {
     agent none 
     stages {
         stage('Example Build') {
-            bat " docker pull maven:3.8.1-adoptopenjdk-11"
+            agent { docker 'maven:3.8.1-adoptopenjdk-11' } 
             steps {
                 echo 'Hello, Maven'
-                bat 'mvn --version'
+                sh 'mvn --version'
             }
         }
         stage('Example Test') {
